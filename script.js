@@ -12,7 +12,8 @@ const pageInfos =
       { text: "", image: "photo/photo7.jpg" },
       { text: "Ố. Hết ảnh gòi. Nghe nhạc thoiii he<br>BaiBai", image: "photo/photo8.jpg" },
       { text: "Hum ni là 2/9 nè, thực sự tui đang rất nghiêm túc nhaaaa. Lời bà cho tui nhiều suy nghĩ lắm á bà"},
-      ]),
+      { text: "Hum ni là 2/9 nè, thực sự tui đang rất nghiêm túc nhaaaa. Lời bà cho tui nhiều suy nghĩ lắm á bà"},
+    ]),
 ];
 
 const nameBook = (window.dataFromSubdomain && window.dataFromSubdomain.data.nameBook)
