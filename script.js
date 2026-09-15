@@ -13,6 +13,8 @@ const pageInfos =
       { text: "Ố. Hết ảnh gòi. Nghe nhạc thoiii he<br>BaiBai", image: "photo/photo8.jpg" },
       { text: "Hum ni là 2/9 nè, thực sự tui đang rất nghiêm túc nhaaaa.", image:"photo/photo8.jpg"},
       { text: "Hum ni là 8/9 nè, chắc là bà cũm ko còn nhớ cái này nữa đâu:))) có lẽ là tui sẽ kết thúc ở đây, lặng lẽ, nhẹ nhàng ha. Cùng buồn buồn nhiều tí, nma ko sao như vậy là đẹp ròi bà ha. Mình thương người ta là 1 chuyện,họ có rung động hay ko là chiện khác mạ😌. Muốn đồng hành cùng bà thật lâu, quan tâm bà thật nhiều, mong mọi thứ thuận lợi với bà nẹ, nhưng rồi tui cứ có cảm giác làm bà phiên á bà, ko có sự phản hồi nào á, kiểu như tự nói vs mong muốn của chính mình vậy á", image:"photo/photo8.jpg"},
+      { text: "next page:))", image: "photo/photo7.jpg" },
+      { text: "Chắc bà đang tạo điều kiện cho tui nè, mấy ngày ròi ko liên hệ gì:) Haizzz shao tui lại mến bà thế này tr😗 Hoy cám ơn bà thời gian qua nhé. Thương em tới đây và tui dần biến mất😶 Bye Baby", image: "photo/photo5.jpg" },
     ]),
 ];
 
