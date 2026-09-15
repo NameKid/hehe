@@ -20,6 +20,9 @@ const pageInfos =
 const nameBook = (window.dataFromSubdomain && window.dataFromSubdomain.data.nameBook)
   ? window.dataFromSubdomain.data.nameBook : "Hướng dương ngược nắng:)";
 
+// Các trang không tạo ảnh (theo index trong pageInfos)
+const noImg = [8, 9, 10]; // ví dụ: 3 trang cuối
+
 function renderBookPages() {
   const book = document.querySelector(".book");
   let html = "";
@@ -27,35 +30,45 @@ function renderBookPages() {
   html += `<label class="page cover" for="page-3"><h1>${nameBook}</h1></label>`;
   html += `<label class="page cover" for="page-1"></label>`;
   let pageIndex = 3;
+
   for (let i = 0; i < pageInfos.length; i += 2) {
     const nextPageId = pageIndex + 2;
     html += `<input type="radio" name="page" id="page-${pageIndex}" />`;
+
+    // Trang bên trái
     html += `<label class="page" for="page-${nextPageId}">`;
     if (pageInfos[i]) {
-      html += `<div class="page-img-wrap"><img src="${
-        pageInfos[i].image
-      }" alt="áº¢nh ${i + 1}" class="page-img" /></div>`;
-      if (pageInfos[i].text)
+      if (pageInfos[i].image && !noImg.includes(i)) {
+        html += `<div class="page-img-wrap"><img src="${pageInfos[i].image}" alt="Ảnh ${i + 1}" class="page-img" /></div>`;
+      }
+      if (pageInfos[i].text) {
         html += `<div class="page-text">${pageInfos[i].text}</div>`;
+      }
     }
     html += `</label>`;
+
+    // Trang bên phải
     html += `<label class="page" for="page-${pageIndex}">`;
     if (pageInfos[i + 1]) {
-      html += `<div class="page-img-wrap"><img src="${
-        pageInfos[i + 1].image
-      }" alt="áº¢nh ${i + 2}" class="page-img" /></div>`;
-      if (pageInfos[i + 1].text)
+      if (pageInfos[i + 1].image && !noImg.includes(i + 1)) {
+        html += `<div class="page-img-wrap"><img src="${pageInfos[i + 1].image}" alt="Ảnh ${i + 2}" class="page-img" /></div>`;
+      }
+      if (pageInfos[i + 1].text) {
         html += `<div class="page-text">${pageInfos[i + 1].text}</div>`;
+      }
     }
     html += `</label>`;
+
     pageIndex += 2;
   }
+
   html += `<input type="radio" name="page" id="page-${pageIndex}" />`;
   html += `<label class="page cover" for="page-${pageIndex + 2}"></label>`;
   html += `<label class="page cover" for="page-${pageIndex}"></label>`;
   html += `<input type="radio" name="page" id="page-${pageIndex + 2}" />`;
   book.innerHTML = html;
 }
+
 
 renderBookPages();
 updateBookShadow();
